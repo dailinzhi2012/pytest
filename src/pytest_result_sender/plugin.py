@@ -1,15 +1,17 @@
 """
-Filename:  
-Author:    
-Time:      
+@Filename:  plugin
+@Author:    szkingdom-11
+@Time:      2024/12/23  15:02
 """
 
 from datetime import datetime
+
 
 def pytest_configure():
 
     # 配置加载完毕之后执行，所有测试用例执行前执行
     print(f"{datetime.now()}  pytest开始执行")
+
 
 def pytest_unconfigure():
 
