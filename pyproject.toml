@@ -23,3 +23,10 @@ pacage-dir = "src"
 
 [tool.pdm]
 distribution = true
+
+[dependency-groups]
+dev = [
+    "black>=24.10.0",
+    "isort>=5.13.2",
+    "flake8>=7.1.1",
+]
