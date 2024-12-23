@@ -1,0 +1,25 @@
+[project]
+name = "pytest-result-sender"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "dailinzhi", email = "dailinzhi2012@163.com"},
+]
+dependencies = ["pytest>=8.3.4"]
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project.entry-points.pytest11]
+result_log = "pytest_result_sender.plugin"
+
+[tool.pdm.build]
+pacage-dir = "src"
+
+
+[tool.pdm]
+distribution = true
