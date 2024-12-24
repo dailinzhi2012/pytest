@@ -16,14 +16,8 @@ data = {
 
 
 def pytest_addoption(parser):
-    parser.addini(
-        "send_when",
-        help="何时发送结果"
-    )
-    parser.addini(
-        "send_api",
-        help="结果发往何处"
-    )
+    parser.addini("send_when", help="何时发送结果")
+    parser.addini("send_api", help="结果发往何处")
 
 
 def pytest_runtest_logreport(report: pytest.TestReport):
@@ -91,7 +85,7 @@ def send_result():
     except Exception:
         pass
 
-    data['send_done'] = 1  # 发送成功
+    data["send_done"] = 1  # 发送成功
 
 
 def remove_leading_zeros_in_time(time_str):
